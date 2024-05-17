@@ -1,5 +1,7 @@
 lib/*
+!lib/.gitkeep
 bin/*
+!bin/.gitkeep
 .vscode/
 *.log
 *.tmp
