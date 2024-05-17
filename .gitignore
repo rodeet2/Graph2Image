@@ -1,0 +1,7 @@
+lib/*
+bin/*
+.vscode/
+*.log
+*.tmp
+.DS_Store
+*.class
