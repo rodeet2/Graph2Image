@@ -101,7 +101,7 @@ public class makeimage<T> extends JFrame {
                     drawNode(g2d, node1, x1, y1);
                     drawnsofar++;
                 } else if (!nodeLocations.containsKey(node1)) {
-                    //for when node not in nodelocations
+                    //for when node is not in nodelocations, i not 0
                     if (nodeLocations.containsKey(node2)) {
                     //but its is connected to a node that is in nodeloactions and drawn. So will be drawn
                     //branching from the already drawn node.
