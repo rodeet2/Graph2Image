@@ -8,6 +8,12 @@ Default image file name is Graph_0. If already exists, the name is incremented.
 
 ![Forest](forest.png)
 
+#### Design Logic:
+
+It takes a list of the nodes that need to be drawn. Node1 and Node2 are connected. It checks if Node1 is the first node, and new root is made. It trys to see if Node1 is drawn already or not, if drawn already, it takes that location and finds a new location and draws Node2.   If Node1 is not drawn, but Node2 is drawn, it takes Nodes2's location and finds a location to draw Node1 as they are connected. Empty space is checked in an order: down, right, left, up. If no space is still found, it increases the gap size, and recursively searches again until found. If Node1 and 2 is not connected to anything already drawn, then new root is made a bit apart from the previous root. But this new root making gate is only open after one complete cycle of checking all the nodes in the list, to see if any nodes will connect with the currently drawn ones. Gate is closed again after making a new root. Basically, it will first try to draw all the conencted nodes, if a node is not connected to anything previously drawn, new root will be made, after a cycle of going through the list and drawing everyhting connected is completed.
+
+
+
 #### Node Visualization:
 Nodes are created gravitating downwards in a tree-like structure.
 Arrows point towards the connected node, positioned at the center of each line.
