@@ -141,7 +141,7 @@ public class makeimage<T> extends JFrame {
                         } else { continue; //skips this node, until one cycle
                     }
                 }}else {
-                    //In nodelocations, load x1, y1, to calculate the connected edge
+                    //Node1 is in nodelocations, means is drawn already, load x1, y1, to calculate the connected Node2's to be drawn location
                     int[] location1 = nodeLocations.get(node1);
                     x1 = location1[0];
                     y1 = location1[1];
