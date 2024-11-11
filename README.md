@@ -10,7 +10,22 @@ Default image file name is Graph_0. If already exists, the name is incremented.
 
 #### Design Logic:
 
-It takes a list of the nodes that need to be drawn. Node1 and Node2 are connected. It checks if Node1 is the first node, and new root is made. It trys to see if Node1 is drawn already or not, if drawn already, it takes that location and finds a new location and draws Node2.   If Node1 is not drawn, but Node2 is drawn, it takes Nodes2's location and finds a location to draw Node1 as they are connected. Empty space is checked in an order: down, right, left, up. If no space is still found, it increases the gap size, and recursively searches again until found. If Node1 and 2 is not connected to anything already drawn, then new root is made a bit apart from the previous root. But this new root making gate is only open after one complete cycle of checking all the nodes in the list, to see if any nodes will connect with the currently drawn ones. Gate is closed again after making a new root. Basically, it will first try to draw all the conencted nodes, if a node is not connected to anything previously drawn, new root will be made, after a cycle of going through the list and drawing everyhting connected is completed.
+The function takes a list of nodes to be drawn, where Node1 and Node2 are connected.
+Starting Node: If Node1 is the first node in the list, it's drawn as the root node.
+
+Connection Logic:
+If Node1 is already drawn, it uses its location to find a new position for Node2.
+If Node1 hasn’t been drawn but Node2 has, it uses Node2's location to determine where to draw Node1.
+If neither Node1 nor Node2 has been drawn, the algorithm considers creating a new root node, but only after completing one full cycle of checking the node list to ensure no connections are missed.
+
+Space Checking:
+To position a new node, it checks empty spaces in this order: down, right, left, and up.
+If no space is available, it increases the gap size and tries again, recursively, until it finds a empty spot.
+
+New Root Creation:
+When there’s a node unconnected to any previously drawn nodes, a new root node is created a bit apart from the initial root.
+The creation of a new root is restricted to after a complete cycle through the list, ensuring that all nodes with possible connections to the existing tree are drawn first.
+Once a new root is created, the gate for new roots closes again until the next cycle.
 
 
 
