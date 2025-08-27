@@ -15,7 +15,7 @@ Starting Node: If Node1 is the first node in the list, it's drawn as the root no
 
 Connection Logic:
 If Node1 is already drawn, it uses its location to find a new position for Node2.
-If Node1 hasn’t been drawn but Node2 has, it uses Node2's location to determine where to draw Node1.
+If Node1 hasn’t been drawn but Node2 is, it uses Node2's location to determine where to draw Node1.
 If neither Node1 nor Node2 has been drawn, the algorithm considers creating a new root node, but only after completing one full cycle of checking the node list to ensure no connections are missed.
 
 Space Checking:
@@ -43,20 +43,7 @@ Example: Node1 Node2 10
 
 #### Dependencies and libraries:
 
-batik-parser-1.17.jar
-batik-dom-1.17.jar
-batik-xml-1.17.jar
-batik-ext-1.17.jar
-batik-extension-1.17.jar
 batik-svggen-1.17.jar
-batik-css-1.17.jar
-batik-i18n-1.17.jar
-batik-svg-dom-1.17.jar
-batik-awt-util-1.17.jar
-batik-constants-1.17.jar
-xml-apis-1.4.01.jar
-xml-apis-ext-1.3.04.jar
-batik-util-1.17.jar
 batik-anim-1.17.jar
 
 https://xmlgraphics.apache.org/batik/download.html
@@ -68,3 +55,4 @@ Have JRE installed.
 ###Running using mac terminal:
 chmod 755 Graph2Image.jar
 java -jar Graph2Image.jar
+
