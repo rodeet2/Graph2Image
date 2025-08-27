@@ -52,7 +52,8 @@ https://xmlgraphics.apache.org/batik/download.html
 Download the recent release, Graph2Image.JAR
 Have JRE installed.
 
-###Running using mac terminal:
+### Running using mac terminal:
 chmod 755 Graph2Image.jar
 java -jar Graph2Image.jar
+
 
